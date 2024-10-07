@@ -74,13 +74,13 @@ For Each t In Selection.Tables
             vidu = vidu & ":" & vbCrLf & "### Input" & vbCrLf & "```" & vbCrLf & intxt & vbCrLf & "```" & vbCrLf & "### Output" & vbCrLf & "```" & vbCrLf & outtxt & vbCrLf & "```" & vbCrLf
         End If
     Next r
-    If Len(ra) > 2 Then Shell "tar -a -c -f " & thu & ".zip  " & thu & "\*.*"
+    'If Len(ra) > 2 Then Shell "tar -a -c -f " & thu & ".zip  " & thu & "\*.*"
     'Rem zip -r ..\%tm%.zip *.*
     'tar -a -c -f ..\%tm%.zip *.*
     t.Rows(1).Cells(2).Range.Text = thumuc + "\" + thu + ".zip"
 Next t
-Selection.EndKey Unit:=wdStory
-Selection.InsertAfter vidu
+'Selection.EndKey Unit:=wdStory
+'Selection.InsertAfter vidu
 End Sub
 
 Sub saveTestAsTHN()
